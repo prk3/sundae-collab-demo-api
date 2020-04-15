@@ -1,0 +1,2 @@
+# jest config file is not included in typescript config
+jest.config.js
