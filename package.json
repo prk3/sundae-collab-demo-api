@@ -1,6 +1,6 @@
 {
-  "name": "api",
-  "description": "",
+  "name": "sundae-collab-demo-api",
+  "description": "An API serving cooking recipes!",
   "version": "0.1.0",
   "author": {
     "name": "prk3",
