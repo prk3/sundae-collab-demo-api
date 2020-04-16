@@ -1,3 +1,6 @@
+FROM node:12
+WORKDIR /usr/src/app
+
 ENV NODE_ENV=production
 ENV PORT=8000
 ENV DB_TYPE=pg
@@ -7,10 +10,8 @@ ENV DB_USER=postgres
 ENV DB_PASSWORD=postgres
 ENV DB_DATABASE=postgres
 
-FROM node:12
-WORKDIR /usr/src/app
-
 COPY package.json .
+COPY package-lock.json .
 RUN npm install
 
 EXPOSE $PORT
