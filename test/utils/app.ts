@@ -1,7 +1,16 @@
 import http from 'http';
+import { Application } from 'express';
 import makeApp from '../../src/app';
 import connect from '../../src/db';
-import './app.d';
+
+declare global {
+  namespace NodeJS {
+    interface Global {
+      getApp: () => Application;
+    }
+  }
+  const getApp: () => Application;
+}
 
 // This file creates a demo-api instance in each test suite.
 // Application's db is replaced with a transaction that gets

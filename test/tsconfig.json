@@ -3,6 +3,5 @@
   "include": [
     "*.ts",
     "utils/*.ts",
-    "utils/*.d.ts"
   ]
 }

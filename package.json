@@ -1,7 +1,7 @@
 {
   "name": "sundae-collab-demo-api",
   "description": "An API serving cooking recipes!",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": {
     "name": "prk3",
     "email": "kukulski.przemyslaw@gmail.com",
@@ -39,7 +39,7 @@
     "eslint-plugin-jest": "^23.8.1",
     "jest": "^25.1.0",
     "supertest": "^4.0.2",
-    "ts-jest": "^25.2.1",
+    "ts-jest": "^25.5.0",
     "ts-node-dev": "^1.0.0-pre.44"
   }
 }
