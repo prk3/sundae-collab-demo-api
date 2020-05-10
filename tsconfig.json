@@ -5,17 +5,17 @@
     "lib": ["es2019"],
     "allowJs": true,
     "skipLibCheck": true,
+    "strict": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "strict": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
-    "noEmit": true
+    "sourceMap": true,
+    "outDir": "build"
   },
   "include": [
     "src",
     "migrations",
     "seeds",
-    "knexfile.ts",
   ]
 }

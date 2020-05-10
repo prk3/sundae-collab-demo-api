@@ -45,13 +45,17 @@ With NODE_ENV set to `production`, demo-api blocks cross-origin requests.
 
 In the project directory, you can run:
 
-### `npm run server`
-
-Runs the server.
-
 ### `npm run dev`
 
-Runs the server in the development mode. It will reload whenever source files change.
+Runs the server in development mode. Reloads the app whenever source files change.
+
+### `npm run build`
+
+Compiles source files to `build` folder.
+
+### `npm run start`
+
+Starts the compiled application.
 
 ### `npm run test`
 

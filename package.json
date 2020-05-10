@@ -1,7 +1,7 @@
 {
   "name": "sundae-collab-demo-api",
   "description": "An API serving cooking recipes!",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "author": {
     "name": "prk3",
     "email": "kukulski.przemyslaw@gmail.com",
@@ -12,18 +12,19 @@
     "type": "git",
     "url": "https://github.com/prk3/sundae-collab-demo-api.git"
   },
-  "main": "src/server.ts",
+  "main": "build/src/server.js",
   "scripts": {
-    "server": "ts-node ./src/server.ts",
-    "dev": "ts-node-dev ./src/server.ts",
+    "dev": "ts-node-dev src/server.ts",
+    "build": "rm -rf build && tsc",
+    "start": "node build/src/server.js",
     "test": "jest",
-    "lint": "eslint --ext .js,.ts ./"
+    "lint": "eslint --ext .js,.ts ."
   },
   "dependencies": {
     "@types/express": "^4.17.2",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "knex": "^0.20.11",
+    "knex": "^0.21.1",
     "objection": "^2.1.3",
     "pg": "^7.18.2",
     "ts-node": "^8.6.2",

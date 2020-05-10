@@ -1,4 +1,4 @@
-FROM node:12
+FROM node:12-alpine
 WORKDIR /usr/src/app
 
 ENV NODE_ENV=production
@@ -14,7 +14,11 @@ COPY package.json .
 COPY package-lock.json .
 RUN npm install
 
-EXPOSE $PORT
-CMD sleep 5 && npx knex migrate:latest && npx knex seed:run && npm run server
-
 COPY . .
+RUN npm run build
+
+EXPOSE $PORT
+CMD sleep 5 \
+    && npx knex --knexfile=knexfile.prod.js migrate:latest \
+    && npx knex --knexfile=knexfile.prod.js seed:run \
+    && npm run start
